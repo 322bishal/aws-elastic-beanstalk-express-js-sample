@@ -43,7 +43,7 @@ pipeline {
             steps {
               // Install snyk 
                 sh 'npm install -g snyk' 
-                sh 'snyk auth $SNYK_TOKEN'
+                sh 'snyk auth $SNYK_KEY'
               // Run snyk test for high severity
                 sh 'snyk test --severity-threshold=high'
            }
