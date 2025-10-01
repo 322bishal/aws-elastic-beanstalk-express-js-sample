@@ -58,7 +58,7 @@ pipeline {
             steps {
                 sh 'docker build -t $DOCKER_USER/$DOCKER_IMAGE_NAME:$IMAGE_TAG .'
 				        sh 'echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_USER --password-stdin'
-				        sh 'docker push $DOCKER_USER/$DOCKER_IMAGE_NAME:$TAG'
+				        sh 'docker push $DOCKER_USER/$DOCKER_IMAGE_NAME:$IMAGE_TAG'
             }
         }
     }
